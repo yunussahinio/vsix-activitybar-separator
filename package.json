@@ -2,7 +2,8 @@
   "name": "vsix-activitybar-separator",
   "displayName": "Activiy Bar Seperator",
   "description": "Adds a visual separator to the Activity Bar",
-  "version": "0.0.1",
+  "publisher": "yunussahinio",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -16,12 +17,7 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "vsix-activitybar-separator.helloWorld",
-        "title": "Hello World"
-      }
-    ],
+    "commands": [],
     "viewsContainers": {
       "activitybar": [
         {
