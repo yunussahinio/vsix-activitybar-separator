@@ -4,7 +4,7 @@
   "description": "Adds a visual separator to the Activity Bar",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.100.0"
+    "vscode": "^1.80.0"
   },
   "categories": [
     "Other"
@@ -17,7 +17,25 @@
         "command": "vsix-activitybar-separator.helloWorld",
         "title": "Hello World"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "separator",
+          "title": "Separator",
+          "icon": "$(remove)"
+        }
+      ]
+    },
+    "views": {
+      "separator": [
+          {
+              "id": "separator",
+              "name": "Separator",
+              "icon": ""
+          }
+      ]
+  }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
