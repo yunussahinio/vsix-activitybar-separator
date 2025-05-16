@@ -3,7 +3,7 @@
   "displayName": "Activiy Bar Seperator",
   "description": "Adds a visual separator to the Activity Bar",
   "publisher": "yunussahinio",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.80.0"
@@ -13,30 +13,174 @@
     "url": "https://github.com/yunussahinio/vsix-activitybar-separator.git"
   },
   "categories": [
-    "Other"
+    "Visualization"
   ],
-  "activationEvents": [],
+  "activationEvents": ["onStartupFinished"],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [],
+    "configuration": {
+      "title": "Activity Bar Separator",
+      "properties": {
+        "activityBarSeparator.count": {
+          "type": "number",
+          "default": 1,
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Number of separators to show in the activity bar"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "activityBarSeparator.setCount",
+        "title": "Activity Bar Separator : Set Separator Count"
+      }
+    ],
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "separator",
-          "title": "Separator",
+          "id": "separator1",
+          "title": "──",
+          "icon": "$(remove)"
+        },
+        {
+          "id": "separator2",
+          "title": "──",
+          "icon": "$(remove)"
+        },
+        {
+          "id": "separator3",
+          "title": "──",
+          "icon": "$(remove)"
+        },
+        {
+          "id": "separator4",
+          "title": "──",
+          "icon": "$(remove)"
+        },
+        {
+          "id": "separator5",
+          "title": "──",
+          "icon": "$(remove)"
+        },
+        {
+          "id": "separator6",
+          "title": "──",
+          "icon": "$(remove)"
+        },
+        {
+          "id": "separator7",
+          "title": "──",
+          "icon": "$(remove)"
+        },
+        {
+          "id": "separator8",
+          "title": "──",
+          "icon": "$(remove)"
+        },
+        {
+          "id": "separator9",
+          "title": "──",
+          "icon": "$(remove)"
+        },
+        {
+          "id": "separator10",
+          "title": "──",
           "icon": "$(remove)"
         }
       ]
     },
     "views": {
-      "separator": [
-          {
-              "id": "separator",
-              "name": "Separator",
-              "icon": ""
-          }
-      ]
-  }
+      "separator1": [
+        {
+          "id": "separator1",
+          "name": "",
+          "icon": "",
+          "type": "webview"
+        }
+      ],
+      "separator2": [
+        {
+          "id": "separator2",
+          "name": "",
+          "icon": "",
+          "type": "webview",
+          "when": "config.activityBarSeparator.count >= 2"
+        }
+      ],
+      "separator3": [
+        {
+          "id": "separator3",
+          "name": "",
+          "icon": "",
+          "type": "webview",
+          "when": "config.activityBarSeparator.count >= 3"
+        }
+      ],
+      "separator4": [
+        {
+          "id": "separator4",
+          "name": "",
+          "icon": "",
+          "type": "webview",
+          "when": "config.activityBarSeparator.count >= 4"
+        }
+      ],
+      "separator5": [
+        {
+          "id": "separator5",
+          "name": "",
+          "icon": "",
+          "type": "webview",
+          "when": "config.activityBarSeparator.count >= 5"
+        }
+      ],
+      "separator6": [
+        {
+          "id": "separator6",
+          "name": "",
+          "icon": "",
+          "type": "webview",
+          "when": "config.activityBarSeparator.count >= 6"
+        }
+      ],
+      "separator7": [
+        {
+          "id": "separator7",
+          "name": "",
+          "icon": "",
+          "type": "webview",
+          "when": "config.activityBarSeparator.count >= 7"
+        }
+      ],
+      "separator8": [
+        {
+          "id": "separator8",
+          "name": "",
+          "icon": "",
+          "type": "webview",
+          "when": "config.activityBarSeparator.count >= 8"
+        }
+      ],
+      "separator9": [
+        {
+          "id": "separator9",
+          "name": "",
+          "icon": "",
+          "type": "webview",
+          "when": "config.activityBarSeparator.count >= 9"
+        }
+      ],
+      "separator10": [
+        {
+          "id": "separator10",
+          "name": "",
+          "icon": "",
+          "type": "webview",
+          "when": "config.activityBarSeparator.count >= 10"
+        }
+      ] 
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
